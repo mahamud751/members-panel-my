@@ -282,7 +282,7 @@ const About = () => {
                         <h4 className="card-title">Income Analysis</h4>
                       </div>
                       <div className="dropdown">
-                        <a className="p-2" href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a className="p-2" href="#!" data-toggle="dropdown" aria-expanded="false">
                           <i className="fe fe-circle" />
                         </a>
                         <div className="dropdown-menu custom-dropdown dropdown-menu-right p-4">

@@ -946,7 +946,7 @@ const profile = () => {
                   </div>
                   <div className="col-12 col-md-12 col-lg-8">
                     <div className="card">
-                      <div className="padding-20">
+                      <div className="padding-40">
                         <ul className="nav nav-tabs" id="myTab2" role="tablist">
                           <li className="nav-item">
                             <a className="nav-link active" id="home-tab2" data-toggle="tab" href="#about" role="tab" aria-selected="true">

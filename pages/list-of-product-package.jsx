@@ -1,6 +1,6 @@
 import React from "react";
 import useScript from "../commonFunction/ReloadJs";
-const ListOfVendor = () => {
+const ListOfProductPackage = () => {
   useScript("/assets/js/app.js");
   return (
     <div>
@@ -8,7 +8,7 @@ const ListOfVendor = () => {
         <div className="col-md-12 m-b-30">
           <div className="d-block d-sm-flex flex-nowrap align-items-center">
             <div className="page-title mb-2 mb-sm-0">
-              <h1>List of vendor</h1>
+              <h1>List of product package</h1>
             </div>
             <div className="ml-auto d-flex align-items-center">
               <nav>
@@ -20,7 +20,7 @@ const ListOfVendor = () => {
                   </li>
                   <li className="breadcrumb-item">Tables</li>
                   <li className="breadcrumb-item active text-primary" aria-current="page">
-                    List of vendor
+                    List of product package
                   </li>
                 </ol>
               </nav>
@@ -39,13 +39,21 @@ const ListOfVendor = () => {
                     <tr>
                       <th>Serial</th>
                       <th>Picture</th>
-                      <th>Vendor id</th>
-                      <th>Name</th>
-                      <th>Number</th>
-                      <th>Email</th>
-                      <th>Details</th>
-                      <th>Join date</th>
-                      <th>Active/Inactive</th>
+                      <th>Category name</th>
+                      <th>Sub category name</th>
+                      <th>Brand name</th>
+                      <th>Product name</th>
+                      <th>Product code</th>
+                      <th>Qty</th>
+                      <th>Tp price</th>
+                      <th>Buy price</th>
+                      <th>Cash back amount</th>
+                      <th>Discount amount</th>
+                      <th>Delivery amount</th>
+                      <th>Short discription</th>
+                      <th>Full discription</th>
+                      <th>Product type</th>
+                      <th>Status</th>
                       <th>Edit</th>
                       <th>Delete</th>
                     </tr>
@@ -53,17 +61,46 @@ const ListOfVendor = () => {
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>Picture</td>
-                      <td>Vendor001</td>
-                      <td>Amir hamza</td>
-                      <td>57684576</td>
-                      <td>test@gmail.com</td>
+                      <td>picture</td>
+                      <td>Category name</td>
+                      <td>Sub category name</td>
+                      <td>Brand name</td>
+                      <td>Product Name</td>
+                      <td>Product code</td>
+                      <td>Qty</td>
+                      <td>Tp price</td>
+                      <td>Buy price</td>
+                      <td>Cash back amount</td>
+                      <td>Discount amount</td>
+                      <td>Delivery amount</td>
+                      <td>Short discription</td>
+                      <td>Full discription</td>
                       <td>
-                        <a href="javascript:void(0);" className="btn btn-block btn-outline-info">
-                          vendor details
-                        </a>
+                        <div className="form-check mb-0 py-2">
+                          <input className="form-check-input" type="radio" name="toasts2" id="toast-bottom-right" defaultValue="toast-bottom-right" />
+                          <label className="form-check-label" htmlFor="toast-bottom-right">
+                            Offer
+                          </label>
+                        </div>
+                        <div className="form-check mb-0 py-2">
+                          <input className="form-check-input" type="radio" name="toasts2" id="toast-bottom-right" defaultValue="toast-bottom-right" />
+                          <label className="form-check-label" htmlFor="toast-bottom-right">
+                            Flash sale
+                          </label>
+                        </div>
+                        <div className="form-check mb-0 py-2">
+                          <input className="form-check-input" type="radio" name="toasts2" id="toast-bottom-right" defaultValue="toast-bottom-right" />
+                          <label className="form-check-label" htmlFor="toast-bottom-right">
+                            Discount
+                          </label>
+                        </div>
+                        <div className="form-check mb-0 py-2">
+                          <input className="form-check-input" type="radio" name="toasts2" id="toast-bottom-right" defaultValue="toast-bottom-right" />
+                          <label className="form-check-label" htmlFor="toast-bottom-right">
+                            Cash back
+                          </label>
+                        </div>
                       </td>
-                      <td>24/10/2021</td>
                       <td>
                         <div className="form-check mb-0 py-2">
                           <input className="form-check-input" type="radio" name="toasts" id="success" defaultValue="success" defaultChecked />
@@ -101,4 +138,4 @@ const ListOfVendor = () => {
   );
 };
 
-export default ListOfVendor;
+export default ListOfProductPackage;
