@@ -1,3 +1,4 @@
+import Image from "next/image";
 import useScript from "../commonFunction/ReloadJs";
 const About = () => {
   useScript("/assets/js/app.js");
@@ -6,7 +7,7 @@ const About = () => {
       <div className="loader">
         <div className="h-100 d-flex justify-content-center">
           <div className="align-self-center">
-            <img src="assets/img/loader/loader.svg" alt="loader" />
+            <Image src="assets/img/loader/loader.svg" alt="loader" />
           </div>
         </div>
       </div>
