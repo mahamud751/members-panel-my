@@ -198,7 +198,7 @@ const profile = () => {
                       </span>{" "}
                       <span className="dropdown-item-desc">
                         {" "}
-                        Low disk space. Let's clean it! <span className="time">17 Hours Ago</span>
+                        Low disk space. Let clean it! <span className="time">17 Hours Ago</span>
                       </span>
                     </a>{" "}
                     <a href="#" className="dropdown-item">
@@ -989,7 +989,7 @@ const profile = () => {
                             </p>
                             <p>Worked as Professor and Head of the department at Sarda Collage, Rajkot, Gujarat from 2003-2015 </p>
                             <p>
-                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text
                               ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
                               not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
                             </p>

@@ -391,7 +391,7 @@ export default function Home() {
                 <div className="col-11">
                   <small className="d-block mb-1">Webster HTML5 </small>
                   <h5 className="mb-0">
-                    <a href="#">I get an error "No Direct Access Allowed!" when I enter purchase</a>
+                    <a href="#">I get an error No Direct Access Allowed when I enter purchase</a>
                   </h5>
                   <ul className="list-unstyled list-inline">
                     <li className="list-inline-item">
@@ -761,7 +761,9 @@ export default function Home() {
               </div>
               <div className="mt-2 mt-xxs-4">
                 <p>
-                  You're scheduled earn <span className="badge  badge-success-inverse">$2,350 today</span>
+                  <div>
+                    You are scheduled earn <span className="badge  badge-success-inverse">$2,350 today</span>
+                  </div>
                 </p>
               </div>
             </div>

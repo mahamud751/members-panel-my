@@ -1,17 +1,17 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import useScript from "../commonFunction/ReloadJs";
 const AddCategory = (props) => {
   useScript("/assets/js/app.js");
 
-  console.log(props)
+  console.log(props);
   const [name, updateDate] = useState({
     title: "",
     desktopicon: "",
     mobileicon: "",
   });
 
-  // subcategory useState 
+  // subcategory useState
   const [subcategory, setSubcategory] = useState({
     categoryId: "",
     title: "",
@@ -19,7 +19,7 @@ const AddCategory = (props) => {
     mobileicon: "",
   });
 
-  // brand useState 
+  // brand useState
   const [brand, setBrand] = useState({
     categoryId: "",
     subId: "",
@@ -43,13 +43,14 @@ const AddCategory = (props) => {
     console.log(subcategory);
     e.preventDefault();
     try {
-      const response = await axios.post("https://baybridgebd.com/AddCategorySub", subcategory)
+      const response = await axios
+        .post("https://baybridgebd.com/AddCategorySub", subcategory)
         .then((response) => {
           console.log(response);
-        }).catch((error) => {
-          console.log(error);
         })
-
+        .catch((error) => {
+          console.log(error);
+        });
     } catch (error) {
       console.log(error);
     }
@@ -65,13 +66,14 @@ const AddCategory = (props) => {
     console.log(brand);
     e.preventDefault();
     try {
-      const response = await axios.post("https://baybridgebd.com/AddCategoryBrand", brand)
+      const response = await axios
+        .post("https://baybridgebd.com/AddCategoryBrand", brand)
         .then((response) => {
           console.log(response);
-        }).catch((error) => {
-          console.log(error);
         })
-
+        .catch((error) => {
+          console.log(error);
+        });
     } catch (error) {
       console.log(error);
     }
@@ -111,7 +113,6 @@ const AddCategory = (props) => {
   //   }
   // }, [])
 
-
   return (
     <div>
       <div className="row">
@@ -123,21 +124,13 @@ const AddCategory = (props) => {
               </div>
             </div>
             <div className="card-body">
-              <form onSubmit={subMit} className="form-horizontal" enctype="multipart/form-data">
+              <form onSubmit={subMit} className="form-horizontal" encType="multipart/form-data">
                 <div className="form-group">
                   <label className="control-label" htmlFor="fname">
                     Category name
                   </label>
                   <div className="mb-2">
-                    <input
-                      type="text"
-                      className="form-control"
-                    
-                      name="title"
-                      placeholder="Category name"
-                      onChange={onChanges}
-                      value={updateDate.title}
-                    />
+                    <input type="text" className="form-control" name="title" placeholder="Category name" onChange={onChanges} value={updateDate.title} />
                   </div>
                 </div>
 
@@ -177,7 +170,7 @@ const AddCategory = (props) => {
               </div>
             </div>
             <div className="card-body">
-              <form onSubmit={subcategoryHandleSubmit} className="form-horizontal" enctype="multipart/form-data">
+              <form onSubmit={subcategoryHandleSubmit} className="form-horizontal" encType="multipart/form-data">
                 <div className="form-group">
                   <label htmlFor="inputState">Select category</label>
                   <select id="inputState" name="categoryId" className="form-control">
@@ -185,7 +178,10 @@ const AddCategory = (props) => {
                     {
                       // console.log(fetchCategoryData.data)
                       props.getCatagory.map((item, index) => (
-                        <option key={index} value={item.id}> {item.title} </option>
+                        <option key={index} value={item.id}>
+                          {" "}
+                          {item.title}{" "}
+                        </option>
                       ))
 
                       // fetchCategoryData.data.map((row) => (
@@ -195,7 +191,6 @@ const AddCategory = (props) => {
                       // props.getCatagory.map((row) => (
                       //   <option key={row.id} value={row.id}> {row.title} </option>
                       // ))
-
                     }
                   </select>
                 </div>
@@ -205,7 +200,14 @@ const AddCategory = (props) => {
                     Subcategory name
                   </label>
                   <div className="mb-2">
-                    <input type="text" className="form-control" onChange={subcategoryHandleChange} value={setSubcategory.title} name="title" placeholder="Sub category name" />
+                    <input
+                      type="text"
+                      className="form-control"
+                      onChange={subcategoryHandleChange}
+                      value={setSubcategory.title}
+                      name="title"
+                      placeholder="Sub category name"
+                    />
                   </div>
                 </div>
 
@@ -247,7 +249,7 @@ const AddCategory = (props) => {
               </div>
             </div>
             <div className="card-body">
-              <form onSubmit={brandHandleSubmit} className="form-horizontal" enctype="multipart/form-data">
+              <form onSubmit={brandHandleSubmit} className="form-horizontal" encType="multipart/form-data">
                 <div className="form-group">
                   <label htmlFor="inputState">Select category</label>
                   <select onChange={brandHandleChange} value={setBrand.categoryId} name="categoryId" className="form-control">
@@ -321,10 +323,10 @@ const AddCategory = (props) => {
 // }
 
 export async function getStaticProps(context) {
-	const  {data:getCatagory}  = await axios.get("https://baybridgebd.com/GetInformationSingle/Category&chk=1");
-	const { data:getSubCatagory } = await axios.get("https://baybridgebd.com/GetInformationSingle/CategorySub&chk=1");
+  const { data: getCatagory } = await axios.get("https://baybridgebd.com/GetInformationSingle/Category&chk=1");
+  const { data: getSubCatagory } = await axios.get("https://baybridgebd.com/GetInformationSingle/CategorySub&chk=1");
   return {
-    props: { getCatagory,getSubCatagory },
+    props: { getCatagory, getSubCatagory },
   };
 }
 

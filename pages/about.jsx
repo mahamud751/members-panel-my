@@ -44,10 +44,7 @@ const About = () => {
                             </a>
                           </li>
                           <li className="breadcrumb-item">Dashboard</li>
-                          <li
-                            className="breadcrumb-item active text-primary"
-                            aria-current="page"
-                          >
+                          <li className="breadcrumb-item active text-primary" aria-current="page">
                             Default
                           </li>
                         </ol>
@@ -64,34 +61,13 @@ const About = () => {
                       >
                         <i className="fe fe-edit btn btn-icon text-primary" />
                       </a>
-                      <a
-                        href="javascript:void(0);"
-                        className="tooltip-wrapper"
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        title
-                        data-original-title="Projects"
-                      >
+                      <a href="javascript:void(0);" className="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title data-original-title="Projects">
                         <i className="fa fa-lightbulb-o btn btn-icon text-success" />
                       </a>
-                      <a
-                        href="javascript:void(0);"
-                        className="tooltip-wrapper"
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        title
-                        data-original-title="Task"
-                      >
+                      <a href="javascript:void(0);" className="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title data-original-title="Task">
                         <i className="fa fa-check btn btn-icon text-warning" />
                       </a>
-                      <a
-                        href="javascript:void(0);"
-                        className="tooltip-wrapper"
-                        data-toggle="tooltip"
-                        data-placement="top"
-                        title
-                        data-original-title="Calendar"
-                      >
+                      <a href="javascript:void(0);" className="tooltip-wrapper" data-toggle="tooltip" data-placement="top" title data-original-title="Calendar">
                         <i className="fa fa-calendar-o btn btn-icon text-cyan" />
                       </a>
                       <a
@@ -112,18 +88,9 @@ const About = () => {
               {/* Notification */}
               <div className="row">
                 <div className="col-md-12">
-                  <div
-                    className="alert border-0 alert-primary bg-gradient m-b-30 alert-dismissible fade show border-radius-none"
-                    role="alert"
-                  >
-                    <strong>Holy guacamole!</strong> You should check in on some
-                    of those fields below.
-                    <button
-                      type="button"
-                      className="close"
-                      data-dismiss="alert"
-                      aria-label="Close"
-                    >
+                  <div className="alert border-0 alert-primary bg-gradient m-b-30 alert-dismissible fade show border-radius-none" role="alert">
+                    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                    <button type="button" className="close" data-dismiss="alert" aria-label="Close">
                       <i className="ti ti-close" />
                     </button>
                   </div>
@@ -138,13 +105,8 @@ const About = () => {
                       <div className="col-xxl-3 col-lg-6">
                         <div className="p-20 border-lg-right border-bottom border-xxl-bottom-0">
                           <div className="d-flex m-b-10">
-                            <p className="mb-0 font-regular text-muted font-weight-bold">
-                              Total Visits
-                            </p>
-                            <a
-                              className="mb-0 ml-auto font-weight-bold"
-                              href="#"
-                            >
+                            <p className="mb-0 font-regular text-muted font-weight-bold">Total Visits</p>
+                            <a className="mb-0 ml-auto font-weight-bold" href="#">
                               <i className="ti ti-more-alt" />{" "}
                             </a>
                           </div>
@@ -164,13 +126,8 @@ const About = () => {
                       <div className="col-xxl-3 col-lg-6">
                         <div className="p-20 border-xxl-right border-bottom border-xxl-bottom-0">
                           <div className="d-flex m-b-10">
-                            <p className="mb-0 font-regular text-muted font-weight-bold">
-                              Total Cost
-                            </p>
-                            <a
-                              className="mb-0 ml-auto font-weight-bold"
-                              href="#"
-                            >
+                            <p className="mb-0 font-regular text-muted font-weight-bold">Total Cost</p>
+                            <a className="mb-0 ml-auto font-weight-bold" href="#">
                               <i className="ti ti-more-alt" />{" "}
                             </a>
                           </div>
@@ -190,13 +147,8 @@ const About = () => {
                       <div className="col-xxl-3 col-lg-6">
                         <div className="p-20 border-lg-right border-bottom border-lg-bottom-0">
                           <div className="d-flex m-b-10">
-                            <p className="mb-0 font-regular text-muted font-weight-bold">
-                              Total Sales
-                            </p>
-                            <a
-                              className="mb-0 ml-auto font-weight-bold"
-                              href="#"
-                            >
+                            <p className="mb-0 font-regular text-muted font-weight-bold">Total Sales</p>
+                            <a className="mb-0 ml-auto font-weight-bold" href="#">
                               <i className="ti ti-more-alt" />{" "}
                             </a>
                           </div>
@@ -224,30 +176,21 @@ const About = () => {
                               <ul className="list-style-none p-0">
                                 <li className="d-flex py-1">
                                   <span>
-                                    <i className="fa fa-circle text-primary pr-2" />{" "}
-                                    Redirect Visits
+                                    <i className="fa fa-circle text-primary pr-2" /> Redirect Visits
                                   </span>{" "}
-                                  <span className="pl-2 font-weight-bold">
-                                    456
-                                  </span>
+                                  <span className="pl-2 font-weight-bold">456</span>
                                 </li>
                                 <li className="d-flex py-1">
                                   <span>
-                                    <i className="fa fa-circle text-warning pr-2" />{" "}
-                                    New Visits
+                                    <i className="fa fa-circle text-warning pr-2" /> New Visits
                                   </span>{" "}
-                                  <span className="pl-2 font-weight-bold">
-                                    256
-                                  </span>
+                                  <span className="pl-2 font-weight-bold">256</span>
                                 </li>
                                 <li className="d-flex py-1">
                                   <span>
-                                    <i className="fa fa-circle text-info pr-2" />{" "}
-                                    Direct Visits
+                                    <i className="fa fa-circle text-info pr-2" /> Direct Visits
                                   </span>{" "}
-                                  <span className="pl-2 font-weight-bold">
-                                    128
-                                  </span>
+                                  <span className="pl-2 font-weight-bold">128</span>
                                 </li>
                               </ul>
                             </div>
@@ -338,13 +281,7 @@ const About = () => {
                         <h4 className="card-title">Income Analysis</h4>
                       </div>
                       <div className="dropdown">
-                        <a
-                          className="p-2"
-                          href="#!"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
+                        <a className="p-2" href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i className="fe fe-circle" />
                         </a>
                         <div className="dropdown-menu custom-dropdown dropdown-menu-right p-4">
@@ -377,21 +314,12 @@ const About = () => {
                       <div className="row">
                         <div className="col-xs-6">
                           <h2>3.8k</h2>
-                          <span className="d-block mb-2 font-16">
-                            AVG sessions
-                          </span>
+                          <span className="d-block mb-2 font-16">AVG sessions</span>
                           <span className="d-block mb-2 mb-sm-5">
-                            <b className="text-primary">-65.88%</b> vs last 1
-                            months
+                            <b className="text-primary">-65.88%</b> vs last 1 months
                           </span>
-                          <p className="mb-3">
-                            Sapiente corporis fugiat, doloremque eveniet nostrum
-                            id molestiae quaerat!
-                          </p>
-                          <a
-                            className="btn btn-round btn-inverse-primary mb-3 mb-sm-0"
-                            href="#"
-                          >
+                          <p className="mb-3">Sapiente corporis fugiat, doloremque eveniet nostrum id molestiae quaerat!</p>
+                          <a className="btn btn-round btn-inverse-primary mb-3 mb-sm-0" href="#">
                             <b>View details </b>
                           </a>
                         </div>
@@ -477,10 +405,7 @@ const About = () => {
                         <h4 className="card-title">Support Ticket</h4>
                       </div>
                       <div className="dropdown">
-                        <a
-                          className="btn btn-round btn-inverse-primary btn-xs"
-                          href="#"
-                        >
+                        <a className="btn btn-round btn-inverse-primary btn-xs" href="#">
                           View all{" "}
                         </a>
                       </div>
@@ -517,10 +442,7 @@ const About = () => {
                         <div className="col-11">
                           <small className="d-block mb-1">Webster HTML5 </small>
                           <h5 className="mb-0">
-                            <a href="#">
-                              I get an error "No Direct Access Allowed!" when I
-                              enter purchase
-                            </a>
+                            <a href="#">I get an error ,No Direct Access Allowed! when I enter purchase</a>
                           </h5>
                           <ul className="list-unstyled list-inline">
                             <li className="list-inline-item">
@@ -542,9 +464,7 @@ const About = () => {
                         <div className="col-11">
                           <small className="d-block mb-1">The corps</small>
                           <h5 className="mb-0">
-                            <a href="#">
-                              OAuth Credentials not generating the key
-                            </a>
+                            <a href="#">OAuth Credentials not generating the key</a>
                           </h5>
                           <ul className="list-unstyled list-inline">
                             <li className="list-inline-item">
@@ -564,14 +484,9 @@ const About = () => {
                           </div>
                         </div>
                         <div className="col-11">
-                          <small className="d-block mb-1">
-                            Sam martin vCard
-                          </small>
+                          <small className="d-block mb-1">Sam martin vCard</small>
                           <h5 className="mb-0">
-                            <a href="#">
-                              Pre-Buy Questions : For bakery Shop (Mentor
-                              Android Application)
-                            </a>
+                            <a href="#">Pre-Buy Questions : For bakery Shop (Mentor Android Application)</a>
                           </h5>
                           <ul className="list-unstyled list-inline">
                             <li className="list-inline-item">
@@ -593,9 +508,7 @@ const About = () => {
                         <div className="col-11">
                           <small className="d-block mb-1">Mentor admin </small>
                           <h5 className="mb-0">
-                            <a href="#">
-                              I need a payment option, for each seller per item
-                            </a>
+                            <a href="#">I need a payment option, for each seller per item</a>
                           </h5>
                           <ul className="list-unstyled list-inline">
                             <li className="list-inline-item">
@@ -618,13 +531,7 @@ const About = () => {
                         <h4 className="card-title">Project Activity</h4>
                       </div>
                       <div className="dropdown">
-                        <a
-                          className="p-2"
-                          href="#!"
-                          data-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
+                        <a className="p-2" href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           <i className="fe fe-more-horizontal" />
                         </a>
                         <div className="dropdown-menu custom-dropdown dropdown-menu-right p-4">
@@ -657,9 +564,7 @@ const About = () => {
                       <ul className="activity">
                         <li className="activity-item primary">
                           <div className="activity-info">
-                            <h5 className="mb-0">
-                              Meeting with Amanda and team.
-                            </h5>
+                            <h5 className="mb-0">Meeting with Amanda and team.</h5>
                             <span>10:30 Jan</span>
                           </div>
                         </li>
@@ -671,10 +576,7 @@ const About = () => {
                         </li>
                         <li className="activity-item success">
                           <div className="activity-info">
-                            <h5 className="mb-0">
-                              {" "}
-                              Complete milestone 3 and update.{" "}
-                            </h5>
+                            <h5 className="mb-0"> Complete milestone 3 and update. </h5>
                             <span>Mon, 14 Jun</span>
                           </div>
                         </li>
@@ -686,26 +588,19 @@ const About = () => {
                         </li>
                         <li className="activity-item warning">
                           <div className="activity-info">
-                            <h5 className="mb-0">
-                              You have created a new task
-                            </h5>
+                            <h5 className="mb-0">You have created a new task</h5>
                             <span>9:30</span>
                           </div>
                         </li>
                         <li className="activity-item info">
                           <div className="activity-info">
-                            <h5 className="mb-0">
-                              {" "}
-                              Meeting with client and CEO.
-                            </h5>
+                            <h5 className="mb-0"> Meeting with client and CEO.</h5>
                             <span>Fri, 10 Aug</span>
                           </div>
                         </li>
                         <li className="activity-item success">
                           <div className="activity-info">
-                            <h5 className="mb-0">
-                              Meeting with Amanda and team.
-                            </h5>
+                            <h5 className="mb-0">Meeting with Amanda and team.</h5>
                             <span>Fri, 01 Dec</span>
                           </div>
                         </li>
@@ -720,10 +615,7 @@ const About = () => {
                         <h4 className="card-title">Sales</h4>
                       </div>
                       <div className="dropdown">
-                        <select
-                          className="custom-select custom-select-sm"
-                          id="inputGroupSelect01"
-                        >
+                        <select className="custom-select custom-select-sm" id="inputGroupSelect01">
                           <option selected>Last 24hr</option>
                           <option value={1}>Last week</option>
                           <option value={2}>Last 6 month</option>
@@ -739,9 +631,7 @@ const About = () => {
                             <h3 className="mt-1 mb-1">$45,541</h3>
                             <span className="d-block">
                               {" "}
-                              <i className="fa fa-arrow-down text-primary" />{" "}
-                              <b className="text-primary">+23%</b> Vs last
-                              months{" "}
+                              <i className="fa fa-arrow-down text-primary" /> <b className="text-primary">+23%</b> Vs last months{" "}
                             </span>
                           </div>
                           <div className="col-xxs-6 mb-3 mb-xxs-0">
@@ -749,8 +639,7 @@ const About = () => {
                             <h3 className="mt-1 mb-1">$6,456</h3>
                             <span className="d-block">
                               {" "}
-                              <i className="fa fa-arrow-down text-cyan" />{" "}
-                              <b className="text-cyan">+65%</b> Vs last months{" "}
+                              <i className="fa fa-arrow-down text-cyan" /> <b className="text-cyan">+65%</b> Vs last months{" "}
                             </span>
                           </div>
                         </div>
@@ -811,18 +700,12 @@ const About = () => {
                       <div className="row no-gutters">
                         <div className="col-xl-4">
                           <h4 className="card-title mb-3">Site Visitors</h4>
-                          <p className="mb-4 ">
-                            Architecto expedita sequi nisi a excepturi error
-                            provident, repellendus quisquam unde aut.
-                          </p>
+                          <p className="mb-4 ">Architecto expedita sequi nisi a excepturi error provident, repellendus quisquam unde aut.</p>
                           <div className="row">
                             <div className="col-12 mb-3">
                               <span>United states: </span>
                               <b className="float-right">80%</b>
-                              <div
-                                className="progress my-2"
-                                style={{ height: 5 }}
-                              >
+                              <div className="progress my-2" style={{ height: 5 }}>
                                 <div
                                   className="progress-bar"
                                   role="progressbar"
@@ -836,10 +719,7 @@ const About = () => {
                             <div className="col-12 mb-3">
                               <span>India: </span>
                               <b className="float-right">75%</b>
-                              <div
-                                className="progress my-2"
-                                style={{ height: 5 }}
-                              >
+                              <div className="progress my-2" style={{ height: 5 }}>
                                 <div
                                   className="progress-bar bg-success"
                                   role="progressbar"
@@ -853,10 +733,7 @@ const About = () => {
                             <div className="col-12 mb-3">
                               <span>Australia: </span>
                               <b className="float-right">65%</b>
-                              <div
-                                className="progress my-2"
-                                style={{ height: 5 }}
-                              >
+                              <div className="progress my-2" style={{ height: 5 }}>
                                 <div
                                   className="progress-bar bg-danger"
                                   role="progressbar"
@@ -870,10 +747,7 @@ const About = () => {
                             <div className="col-12 mb-3">
                               <span>Germany: </span>
                               <b className="float-right">55%</b>
-                              <div
-                                className="progress my-2"
-                                style={{ height: 5 }}
-                              >
+                              <div className="progress my-2" style={{ height: 5 }}>
                                 <div
                                   className="progress-bar bg-info"
                                   role="progressbar"
@@ -887,10 +761,7 @@ const About = () => {
                             <div className="col-12 mb-3">
                               <span>United kingdom: </span>
                               <b className="float-right">80%</b>
-                              <div
-                                className="progress my-2"
-                                style={{ height: 5 }}
-                              >
+                              <div className="progress my-2" style={{ height: 5 }}>
                                 <div
                                   className="progress-bar bg-warning"
                                   role="progressbar"
@@ -928,33 +799,27 @@ const About = () => {
                           <h3 className="mb-1 mb-xxs-0">25,456</h3>
                           <span className="d-block">
                             {" "}
-                            <i className="fa fa-arrow-up text-success" />{" "}
-                            <b className="text-success">+23%</b> Views
+                            <i className="fa fa-arrow-up text-success" /> <b className="text-success">+23%</b> Views
                           </span>
                         </div>
                         <div className="col-6 col-xxs-4 col-md-4 mb-3 mb-sm-0">
                           <h3 className="mb-1 mb-xxs-0">45,541</h3>
                           <span className="d-block">
                             {" "}
-                            <i className="fa fa-arrow-up text-success" />{" "}
-                            <b className="text-success">+15%</b> Likes{" "}
+                            <i className="fa fa-arrow-up text-success" /> <b className="text-success">+15%</b> Likes{" "}
                           </span>
                         </div>
                         <div className="col-12 col-xxs-4 col-md-4 mb-3 mb-sm-0">
                           <h3 className="mb-1 mb-xxs-0">78,462</h3>
                           <span className="d-block">
                             {" "}
-                            <i className="fa fa-arrow-up text-success" />{" "}
-                            <b className="text-success">+32%</b> Comments{" "}
+                            <i className="fa fa-arrow-up text-success" /> <b className="text-success">+32%</b> Comments{" "}
                           </span>
                         </div>
                       </div>
                       <div className="mt-2 mt-xxs-4">
                         <p>
-                          You're scheduled earn{" "}
-                          <span className="badge  badge-success-inverse">
-                            $2,350 today
-                          </span>
+                          You are scheduled earn <span className="badge  badge-success-inverse">$2,350 today</span>
                         </p>
                       </div>
                     </div>
@@ -1002,43 +867,19 @@ const About = () => {
                           </li>
                         </ul>
                         <div className="tab-content mt-5">
-                          <div
-                            className="tab-pane fade active show"
-                            id="home-02"
-                            role="tabpanel"
-                            aria-labelledby="home-02-tab"
-                          >
+                          <div className="tab-pane fade active show" id="home-02" role="tabpanel" aria-labelledby="home-02-tab">
                             <div className="apexchart-wrapper">
-                              <div
-                                id="analytics4"
-                                className="chart-fit mb-minus"
-                              />
+                              <div id="analytics4" className="chart-fit mb-minus" />
                             </div>
                           </div>
-                          <div
-                            className="tab-pane fade"
-                            id="profile-02"
-                            role="tabpanel"
-                            aria-labelledby="profile-02-tab"
-                          >
+                          <div className="tab-pane fade" id="profile-02" role="tabpanel" aria-labelledby="profile-02-tab">
                             <div className="apexchart-wrapper">
-                              <div
-                                id="analytics5"
-                                className="chart-fit mb-minus"
-                              />
+                              <div id="analytics5" className="chart-fit mb-minus" />
                             </div>
                           </div>
-                          <div
-                            className="tab-pane fade"
-                            id="portfolio-02"
-                            role="tabpanel"
-                            aria-labelledby="portfolio-02-tab"
-                          >
+                          <div className="tab-pane fade" id="portfolio-02" role="tabpanel" aria-labelledby="portfolio-02-tab">
                             <div className="apexchart-wrapper">
-                              <div
-                                id="analytics6"
-                                className="chart-fit mb-minus"
-                              />
+                              <div id="analytics6" className="chart-fit mb-minus" />
                             </div>
                           </div>
                         </div>
@@ -1059,51 +900,25 @@ const About = () => {
                       <div className="row">
                         <div className="col-lg-3">
                           <div id="external-events">
-                            <button
-                              className="btn btn-primary btn-block"
-                              data-toggle="modal"
-                              data-target="#eventModal"
-                            >
+                            <button className="btn btn-primary btn-block" data-toggle="modal" data-target="#eventModal">
                               Add New Event
                             </button>
-                            <p className="mt-3">
-                              Drag and drop your event or click in the calendar.
-                            </p>
-                            <div
-                              className="fc-event fc-event-primary"
-                              data-color="fc-event-primary"
-                            >
+                            <p className="mt-3">Drag and drop your event or click in the calendar.</p>
+                            <div className="fc-event fc-event-primary" data-color="fc-event-primary">
                               <span /> Family Vacation
                             </div>
-                            <div
-                              className="fc-event fc-event-warning"
-                              data-color="fc-event-warning"
-                            >
+                            <div className="fc-event fc-event-warning" data-color="fc-event-warning">
                               <span /> Meeting In Office
                             </div>
-                            <div
-                              className="fc-event fc-event-danger"
-                              data-color="fc-event-danger"
-                            >
+                            <div className="fc-event fc-event-danger" data-color="fc-event-danger">
                               <span /> Client Call
                             </div>
-                            <div
-                              className="fc-event fc-event-success"
-                              data-color="fc-event-success"
-                            >
+                            <div className="fc-event fc-event-success" data-color="fc-event-success">
                               <span /> Interview
                             </div>
                             <div className="form-check">
-                              <input
-                                className="form-check-input"
-                                type="checkbox"
-                                defaultValue
-                                id="defaultCheck1"
-                              />
-                              <label
-                                className="form-check-label"
-                                htmlFor="defaultCheck1"
-                              >
+                              <input className="form-check-input" type="checkbox" defaultValue id="defaultCheck1" />
+                              <label className="form-check-label" htmlFor="defaultCheck1">
                                 Remove After Drop
                               </label>
                             </div>
@@ -1121,29 +936,14 @@ const About = () => {
               </div>
               {/* end row */}
               {/* event Modal */}
-              <div
-                className="modal fade"
-                id="eventModal"
-                tabIndex={-1}
-                role="dialog"
-                aria-labelledby="verticalCenterTitle"
-                aria-hidden="true"
-              >
-                <div
-                  className="modal-dialog modal-dialog-centered"
-                  role="document"
-                >
+              <div className="modal fade" id="eventModal" tabIndex={-1} role="dialog" aria-labelledby="verticalCenterTitle" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered" role="document">
                   <div className="modal-content">
                     <div className="modal-header">
                       <h5 className="modal-title" id="verticalCenterTitle">
                         Add New Event
                       </h5>
-                      <button
-                        type="button"
-                        className="close"
-                        data-dismiss="modal"
-                        aria-label="Close"
-                      >
+                      <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                       </button>
                     </div>
@@ -1151,11 +951,7 @@ const About = () => {
                       <form>
                         <div className="form-group">
                           <label htmlFor="modelemail">Event Name</label>
-                          <input
-                            type="email"
-                            className="form-control"
-                            id="modelemail"
-                          />
+                          <input type="email" className="form-control" id="modelemail" />
                         </div>
                         <div className="form-group">
                           <label>Choose Event Color</label>
@@ -1169,11 +965,7 @@ const About = () => {
                       </form>
                     </div>
                     <div className="modal-footer">
-                      <button
-                        type="button"
-                        className="btn btn-danger"
-                        data-dismiss="modal"
-                      >
+                      <button type="button" className="btn btn-danger" data-dismiss="modal">
                         Close
                       </button>
                       <button type="button" className="btn btn-success">

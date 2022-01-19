@@ -15,7 +15,7 @@ const UpdateProductStockQty = () => {
               </div>
             </div>
             <div className="card-body">
-              <form id="signupForm" method="post" className="form-horizontal" enctype="multipart/form-data">
+              <form id="signupForm" method="post" className="form-horizontal" encType="multipart/form-data">
                 <div className="form-group">
                   <label htmlFor="inputState">Select product type</label>
                   <select id="inputState" className="form-control">

@@ -73,7 +73,7 @@ const ListOfCategory = (props) => {
 
                         <td>
                           {item.CategorySubs.map((iem1) => (
-                            <div>
+                            <div key={iem1.title}>
                               <input type="text" className="form-control" id="fname" name="tittle" value={iem1.title} />
                               <div>
                                 <div className="form-check mb-0 py-2">
@@ -97,9 +97,9 @@ const ListOfCategory = (props) => {
                           ))}
                         </td>
                         <td>
-                          {item.CategorySubs.map((iem1) => (
+                          {item.CategorySubs.map((iem1) =>
                             iem1.CategoryBrands.map((item2) => (
-                              <div>
+                              <div key={item2.title}>
                                 <input type="text" className="form-control" id="fname" name="tittle" value={item2.title} />
                                 <div className="form-check mb-0 py-2">
                                   <input
@@ -127,7 +127,7 @@ const ListOfCategory = (props) => {
                                 </a>
                               </div>
                             ))
-                          ))}
+                          )}
                         </td>
                       </tr>
                     ))}

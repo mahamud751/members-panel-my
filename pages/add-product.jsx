@@ -15,7 +15,7 @@ const AddProduct = () => {
               </div>
             </div>
             <div className="card-body">
-              <form id="signupForm" method="post" className="form-horizontal" enctype="multipart/form-data">
+              <form id="signupForm" method="post" className="form-horizontal" encType="multipart/form-data">
                 <div className="form-row">
                   <div className="col-md-4">
                     <div className="form-group">
@@ -168,27 +168,27 @@ const AddProduct = () => {
                   </select>
                 </div>
 
-                <div class="card card-statistics">
-                  <div class="card-header">
-                    <div class="card-heading">
-                      <h4 class="card-title">Short Discription</h4>
+                <div className="card card-statistics">
+                  <div className="card-header">
+                    <div className="card-heading">
+                      <h4 className="card-title">Short Discription</h4>
                     </div>
                   </div>
-                  <div class="card-body">
-                    <div class="quill-editor">
+                  <div className="card-body">
+                    <div className="quill-editor">
                       <div id="editor"></div>
                     </div>
                   </div>
                 </div>
 
-                <div class="card card-statistics">
-                  <div class="card-header">
-                    <div class="card-heading">
-                      <h4 class="card-title">Full Discription</h4>
+                <div className="card card-statistics">
+                  <div className="card-header">
+                    <div className="card-heading">
+                      <h4 className="card-title">Full Discription</h4>
                     </div>
                   </div>
-                  <div class="card-body">
-                    <div id="summernote" class="summernote"></div>
+                  <div className="card-body">
+                    <div id="summernote" className="summernote"></div>
                   </div>
                 </div>
 

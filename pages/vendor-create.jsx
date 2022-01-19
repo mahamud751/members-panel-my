@@ -15,7 +15,7 @@ const CreateVendor = () => {
               </div>
             </div>
             <div className="card-body">
-              <form id="signupForm" method="post" className="form-horizontal" enctype="multipart/form-data">
+              <form id="signupForm" method="post" className="form-horizontal" encType="multipart/form-data">
                 <div className="form-row">
                   <div className="col-md-6">
                     <div className="form-group">
