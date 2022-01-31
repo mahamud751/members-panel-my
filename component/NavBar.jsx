@@ -158,7 +158,7 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/list-of-product-offer">
+                  <Link href="/list-of-offer">
                     <a>List of offer</a>
                   </Link>
                 </li>
