@@ -1,7 +1,33 @@
-import React from "react";
+import axios from "axios";
+import { useEffect } from "react";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { storeListOfVendorProductStockQty } from "../atom/listOfMembersStore";
 import useScript from "../commonFunction/ReloadJs";
-const AllPendingProductOrder = () => {
+
+const AllPendingProductOrder = (props) => {
   useScript("/assets/js/app.js");
+
+  const getPendingAllProductOrder = props.data;
+  console.log(getPendingAllProductOrder);
+  const [ProductStockQty, updatePendingAllProductOrder] = useRecoilState(storeListOfVendorProductStockQty);
+
+  useEffect(() => {
+    updatePendingAllProductOrder(getPendingAllProductOrder);
+  }, [updatePendingAllProductOrder]);
+  // const deleteItem = async (id) => {
+  //   const formData = { tableName: "product", idColumnName: "id", idValue: id };
+  //   const response = await axios
+  //     .post(process.env.API_URL + "/Delete", formData)
+  //     .then((item) => {
+  //       MySwal.fire("Good job!", "Delete information successfully", "success");
+  //       deleteInformation(id, product, getPendingProductList, updateProductInfo);
+  //     })
+  //     .catch((error) => {
+  //       MySwal.fire("Brand not saved!", "Something Error Found.", "warning");
+  //     });
+  // };
+  const pendingAllProductOrders = useRecoilValue(storeListOfVendorProductStockQty);
+  console.log(pendingAllProductOrders);
   return (
     <div>
       <div className="row">
@@ -99,4 +125,17 @@ const AllPendingProductOrder = () => {
   );
 };
 
+export async function getServerSideProps(context) {
+  const { data } = await axios.get(process.env.API_URL + "/vendorPanel/v1/GetListOfProductPackageStock");
+  // console.log(data)
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: { data },
+  };
+}
 export default AllPendingProductOrder;
