@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { storeListOfVendorProductStockQty } from "../atom/listOfVendor";
+import { storeProcessListOfProduct } from "../atom/listOfPendingOrder";
 import useScript from "../commonFunction/ReloadJs";
 
 const DailyProcessProductOrder = (props) => {
@@ -9,7 +9,7 @@ const DailyProcessProductOrder = (props) => {
 
   const getDailyProcessProductOrder = props.data;
   console.log(getDailyProcessProductOrder);
-  const [ProductStockQty, updateProcessProductOrder] = useRecoilState(storeListOfVendorProductStockQty);
+  const [ProductStockQty, updateProcessProductOrder] = useRecoilState(storeProcessListOfProduct);
 
   useEffect(() => {
     updateProcessProductOrder(getDailyProcessProductOrder);
@@ -26,7 +26,7 @@ const DailyProcessProductOrder = (props) => {
   //       MySwal.fire("Brand not saved!", "Something Error Found.", "warning");
   //     });
   // };
-  const processProductOrders = useRecoilValue(storeListOfVendorProductStockQty);
+  const processProductOrders = useRecoilValue(storeProcessListOfProduct);
   console.log(processProductOrders);
   return (
     <div>
