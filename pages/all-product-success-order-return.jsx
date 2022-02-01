@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { storeReturnSuccessListOfProduct } from "../atom/listOfPendingOrder";
+import { storeTotalReturnSuccessListOfProduct } from "../atom/listOfPendingOrder";
 import useScript from "../commonFunction/ReloadJs";
 
 const AllSuccessProductOrderReturn = (props) => {
@@ -9,7 +9,7 @@ const AllSuccessProductOrderReturn = (props) => {
 
   const getSuccessAllProductOrderReturn = props.data;
   console.log(getSuccessAllProductOrderReturn);
-  const [ProductStockQty, updateSuccessAllProductOrderReturn] = useRecoilState(storeReturnSuccessListOfProduct);
+  const [ProductStockQty, updateSuccessAllProductOrderReturn] = useRecoilState(storeTotalReturnSuccessListOfProduct);
 
   useEffect(() => {
     updateSuccessAllProductOrderReturn(getSuccessAllProductOrderReturn);
@@ -26,7 +26,7 @@ const AllSuccessProductOrderReturn = (props) => {
   //       MySwal.fire("Brand not saved!", "Something Error Found.", "warning");
   //     });
   // };
-  const successAllProductOrdersReturns = useRecoilValue(storeReturnSuccessListOfProduct);
+  const successAllProductOrdersReturns = useRecoilValue(storeTotalReturnSuccessListOfProduct);
   console.log(successAllProductOrdersReturns);
   return (
     <div>
@@ -66,11 +66,8 @@ const AllSuccessProductOrderReturn = (props) => {
                       <th>Serial</th>
                       <th>Outlet/Vendor id</th>
                       <th>Outlet/Vendor information</th>
-                      <th>User name</th>
                       <th>Invoice</th>
-                      <th>Number</th>
-                      <th>Email</th>
-                      <th>Address</th>
+
                       <th>Delivery Type</th>
                       <th>Delivery Address</th>
                       <th>Total product</th>
@@ -81,39 +78,41 @@ const AllSuccessProductOrderReturn = (props) => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Serial</td>
-                      <td>Hamza</td>
-                      <td>
+                    {successAllProductOrdersReturns.map((item, index) => (
+                      <tr key={index}>
+                        <td>{index + 1}</td>
+                        <td>{item.userId}</td>
+                        <td>
+                          <td>
+                            <a href="javascript:void(0);" className="btn btn-block btn-outline-info">
+                              Information
+                            </a>
+                          </td>
+                        </td>
+
                         <td>
                           <a href="javascript:void(0);" className="btn btn-block btn-outline-info">
-                            Information
+                            {item.invoiceNumber}
                           </a>
                         </td>
-                      </td>
-                      <td>Amir</td>
-                      <td>
-                        <a href="javascript:void(0);" className="btn btn-block btn-outline-info">
-                          Invoice
-                        </a>
-                      </td>
-                      <td>01720314673</td>
-                      <td>amir@gmail.com</td>
-                      <td>Dhaka</td>
-                      <td>Cash on delivery</td>
-                      <td>dhaka</td>
-                      <td>10</td>
-                      <td>15</td>
-                      <td>150000</td>
-                      <td>
-                        <label className="badge mb-0 badge-success-inverse ">Success</label>
-                      </td>
-                      <td>
-                        <a href="javascript:void(0);" className="btn btn-block btn-square btn-outline-danger">
-                          Delete
-                        </a>
-                      </td>
-                    </tr>
+
+                        <td>Cash on delivery</td>
+                        <td>
+                          {item.memberDetails[0].city} ,{item.memberDetails[0].districts}, {item.memberDetails[0].division}
+                        </td>
+                        <td>{item.totalProduct}</td>
+                        <td>{item.totalProduct}</td>
+                        <td>{item.totalPrice}</td>
+                        <td>
+                          <label className="badge mb-0 badge-success-inverse ">{item.status}</label>
+                        </td>
+                        <td>
+                          <a href="javascript:void(0);" className="btn btn-block btn-square btn-outline-danger">
+                            Delete
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
@@ -126,7 +125,7 @@ const AllSuccessProductOrderReturn = (props) => {
 };
 
 export async function getServerSideProps(context) {
-  const { data } = await axios.get(process.env.API_URL + "/vendorPanel/v1/GetListOfProductPackageStock");
+  const { data } = await axios.get(process.env.API_URL + "/userPanel/v1/GetTotalReturnSuccessOrderList");
   // console.log(data)
   if (!data) {
     return {

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { storeListOfProcessOrder } from "../atom/listOfMembersStore";
+import { storeTotalProcessListOfProduct } from "../atom/listOfMembersStore";
 import useScript from "../commonFunction/ReloadJs";
 
 const AllProcessProductOrder = (props) => {
@@ -9,7 +9,7 @@ const AllProcessProductOrder = (props) => {
 
   const getProcessAllProductOrder = props.data;
   console.log(getProcessAllProductOrder);
-  const [ProductStockQty, updateProcessAllProductOrder] = useRecoilState(storeListOfProcessOrder);
+  const [ProductStockQty, updateProcessAllProductOrder] = useRecoilState(storeTotalProcessListOfProduct);
 
   useEffect(() => {
     updateProcessAllProductOrder(getProcessAllProductOrder);
@@ -26,7 +26,7 @@ const AllProcessProductOrder = (props) => {
   //       MySwal.fire("Brand not saved!", "Something Error Found.", "warning");
   //     });
   // };
-  const processAllProductOrders = useRecoilValue(storeListOfProcessOrder);
+  const processAllProductOrders = useRecoilValue(storeTotalProcessListOfProduct);
   console.log(processAllProductOrders);
   return (
     <div>
@@ -66,11 +66,8 @@ const AllProcessProductOrder = (props) => {
                       <th>Serial</th>
                       <th>Outlet/Vendor id</th>
                       <th>Outlet/Vendor information</th>
-                      <th>User name</th>
                       <th>Invoice</th>
-                      <th>Number</th>
-                      <th>Email</th>
-                      <th>Address</th>
+
                       <th>Delivery Type</th>
                       <th>Delivery Address</th>
                       <th>Total product</th>
@@ -81,39 +78,41 @@ const AllProcessProductOrder = (props) => {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Serial</td>
-                      <td>Hamza</td>
-                      <td>
+                    {processAllProductOrders.map((item, index) => (
+                      <tr key={index}>
+                        <td>{index + 1}</td>
+                        <td>{item.userId}</td>
+                        <td>
+                          <td>
+                            <a href="javascript:void(0);" className="btn btn-block btn-outline-info">
+                              Information
+                            </a>
+                          </td>
+                        </td>
+
                         <td>
                           <a href="javascript:void(0);" className="btn btn-block btn-outline-info">
-                            Information
+                            {item.invoiceNumber}
                           </a>
                         </td>
-                      </td>
-                      <td>Amir</td>
-                      <td>
-                        <a href="javascript:void(0);" className="btn btn-block btn-outline-info">
-                          Invoice
-                        </a>
-                      </td>
-                      <td>01720314673</td>
-                      <td>amir@gmail.com</td>
-                      <td>Dhaka</td>
-                      <td>Cash on delivery</td>
-                      <td>dhaka</td>
-                      <td>10</td>
-                      <td>15</td>
-                      <td>150000</td>
-                      <td>
-                        <label className="badge mb-0 badge-primary-inverse">Process</label>
-                      </td>
-                      <td>
-                        <a href="javascript:void(0);" className="btn btn-block btn-square btn-outline-danger">
-                          Delete
-                        </a>
-                      </td>
-                    </tr>
+
+                        <td>Cash on delivery</td>
+                        <td>
+                          {item.memberDetails[0].city} ,{item.memberDetails[0].districts}, {item.memberDetails[0].division}
+                        </td>
+                        <td>{item.totalProduct}</td>
+                        <td>{item.totalProduct}</td>
+                        <td>{item.totalPrice}</td>
+                        <td>
+                          <label className="badge mb-0 badge-success-inverse ">{item.status}</label>
+                        </td>
+                        <td>
+                          <a href="javascript:void(0);" className="btn btn-block btn-square btn-outline-danger">
+                            Delete
+                          </a>
+                        </td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>
@@ -126,7 +125,7 @@ const AllProcessProductOrder = (props) => {
 };
 
 export async function getServerSideProps(context) {
-  const { data } = await axios.get(process.env.API_URL + "/vendorPanel/v1/GetListOfProductPackageStock");
+  const { data } = await axios.get(process.env.API_URL + "/userPanel/v1/GetTotalProcessOrderList");
   // console.log(data)
   if (!data) {
     return {

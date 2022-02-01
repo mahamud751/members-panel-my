@@ -148,45 +148,6 @@ const NavBar = () => {
             <li>
               <a className="has-arrow" href="javascript:void(0)" aria-expanded="false">
                 <i className="nav-icon ti ti-rocket" />
-                <span className="nav-title">List of product</span>
-                <span className="nav-label label label-danger">6</span>
-              </a>
-              <ul aria-expanded="false">
-                <li>
-                  <Link href="/list-of-product">
-                    <a>List of product</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/list-of-offer">
-                    <a>List of offer</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/list-of-product-flash-sales">
-                    <a>List of flash sales</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/list-of-product-cash-back">
-                    <a>List of cash back</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/list-of-product-discount">
-                    <a>List of discount</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/list-of-product-package">
-                    <a>List of product package</a>
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a className="has-arrow" href="javascript:void(0)" aria-expanded="false">
-                <i className="nav-icon ti ti-rocket" />
                 <span className="nav-title">Notice</span>
                 <span className="nav-label label label-danger">1</span>
               </a>
