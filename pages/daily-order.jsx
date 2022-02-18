@@ -1,4 +1,5 @@
 import axios from "axios";
+import Link from "next/link";
 import { useEffect } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { storeListOfDailyOrder } from "../atom/listOfPendingOrder";
@@ -85,17 +86,19 @@ const DailyOrder = (props) => {
                         <td>{item.userId}</td>
                         <td>
                           <td>
-                            <a href="javascript:void(0);" className="btn btn-block btn-outline-info">
+                            <a href="javascript:void(0);" className="btn btn-block btn-outline-info" data-toggle="modal" data-target="#loginModal">
                               Information
                             </a>
                           </td>
                         </td>
 
-                        <td>
-                          <a href="javascript:void(0);" className="btn btn-block btn-outline-info">
-                            {item.invoiceNumber}
-                          </a>
-                        </td>
+                        <Link href={"/invoice"}>
+                          <td>
+                            <a href="javascript:void(0);" className="btn btn-block btn-outline-info">
+                              {item.invoiceNumber}
+                            </a>
+                          </td>
+                        </Link>
 
                         <td>Cash on delivery</td>
                         <td>
@@ -116,6 +119,42 @@ const DailyOrder = (props) => {
                     ))}
                   </tbody>
                 </table>
+              </div>
+              <div className="modal fade" id="loginModal" tabIndex="{-1}" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+                <div className="modal-dialog modal-dialog-centered" role="document">
+                  <div className="modal-content">
+                    <div className="modal-header">
+                      <h5 className="modal-title">User Details</h5>
+                      <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+                    </div>
+                    <div className="modal-body">
+                      <div className="datatable-wrapper table-responsive">
+                        <table id="datatable" className="display compact table table-striped table-bordered">
+                          <tbody>
+                            <tr>
+                              <th>User Name</th>
+                              <td>Mahamud</td>
+                            </tr>
+                            <tr>
+                              <th>User Phone Number</th>
+                              <td>+889090298</td>
+                            </tr>
+                            <tr>
+                              <th>User Email</th>
+                              <td>pino@gmail.com</td>
+                            </tr>
+                            <tr>
+                              <th>User Address</th>
+                              <td>Dhaka</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
