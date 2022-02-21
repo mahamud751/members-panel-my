@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect } from "react";
+import jwtDecode from "jwt-decode";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { storeReturnProcessListOfProduct } from "../atom/listOfPendingOrder";
 import useScript from "../commonFunction/ReloadJs";
@@ -124,8 +125,10 @@ const DailyProcessProductOrderReturn = (props) => {
   );
 };
 
-export async function getServerSideProps(context) {
-  const { data } = await axios.get(process.env.API_URL + "/userPanel/v1/GetDailyReturnProcessOrderList");
+export async function getServerSideProps({ req }) {
+  const dhfjk = req.cookies.token;
+  let decodedToken = jwtDecode(dhfjk);
+  const { data } = await axios.get(process.env.API_URL + "/userPanel/v1/GetDailyReturnProcessOrderList/" + decodedToken.userId);
   // console.log(data)
   if (!data) {
     return {

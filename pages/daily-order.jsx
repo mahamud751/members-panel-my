@@ -1,4 +1,5 @@
 import axios from "axios";
+import jwtDecode from "jwt-decode";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
@@ -102,7 +103,7 @@ const DailyOrder = (props) => {
 
                         <td>Cash on delivery</td>
                         <td>
-                          {item.memberDetails[0].city} ,{item.memberDetails[0].districts}, {item.memberDetails[0].division}
+                          {/* {item.memberDetails[0].city} ,{item.memberDetails[0].districts}, {item.memberDetails[0].division} */}
                         </td>
                         <td>{item.totalProduct}</td>
                         <td>{item.totalProduct}</td>
@@ -164,9 +165,12 @@ const DailyOrder = (props) => {
   );
 };
 
-export async function getServerSideProps(context) {
-  const { data } = await axios.get(process.env.API_URL + "/userPanel/v1/GetDailyOrderList");
-  // console.log(data)
+export async function getServerSideProps({ req }) {
+  const dhfjk = req.cookies.token;
+  let decodedToken = jwtDecode(dhfjk);
+  console.log(decodedToken.userId);
+  const { data } = await axios.get(process.env.API_URL + "/userPanel/v1/GetDailyOrderList/" + decodedToken.userId);
+
   if (!data) {
     return {
       notFound: true,

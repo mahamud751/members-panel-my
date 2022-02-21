@@ -1,4 +1,5 @@
 import axios from "axios";
+import jwtDecode from "jwt-decode";
 import { useEffect } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { storeTotalReturnPendingListOfProduct } from "../atom/listOfPendingOrder";
@@ -124,8 +125,11 @@ const AllPendingProductOrderReturn = (props) => {
   );
 };
 
-export async function getServerSideProps(context) {
-  const { data } = await axios.get(process.env.API_URL + "/userPanel/v1/GetTotalReturnPendingOrderList");
+export async function getServerSideProps({ req }) {
+  const dhfjk = req.cookies.token;
+  let decodedToken = jwtDecode(dhfjk);
+
+  const { data } = await axios.get(process.env.API_URL + "/userPanel/v1/GetTotalReturnPendingOrderList/" + decodedToken.userId);
   // console.log(data)
   if (!data) {
     return {
